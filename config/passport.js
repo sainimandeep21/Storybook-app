@@ -8,7 +8,9 @@ module.exports = function (passport) {
       {
         clientID: process.env.GITHUB_CLIENT_ID,
         clientSecret: process.env.GITHUB_CLIENT_SECRET,
-        callbackURL: "/auth/github/callback",
+        callbackURL:
+          "https://sainimandeep-storybookapp.herokuapp.com/auth/github/callback",
+        proxy: true,
       },
       async (accessToken, refreshToken, profile, done) => {
         const newUser = {

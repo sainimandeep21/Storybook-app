@@ -11,7 +11,7 @@ router.get(
 );
 
 //@desc   github auth callback
-// route GET /auth/google/callback
+// route GET /auth/github/callback
 router.get(
   "/github/callback",
   passport.authenticate("github", { failureRedirect: "/" }),
